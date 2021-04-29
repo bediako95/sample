@@ -61,7 +61,7 @@ a:hover {
 
 @media(max-width: 1048px) {
     #logo {
-        padding: 60px;
+        padding: 0 60px;
         font-size: 32sp;
     }
     nav ul {
@@ -73,6 +73,9 @@ a:hover {
 }
 
 @media(max-width:909px) {
+    #logo {
+        font-size: 25px;
+    }
     #icon {
         display: block;
     }
@@ -100,6 +103,83 @@ a:hover {
         color: yellow;
         border: none;
         transition: 1s;
+    }
+    nav ul.show {
+        left: 0;
+    }
+}
+
+@media(max-width:350px) {
+    #logo {
+        font-size: 16px;
+        padding: 0 30px;
+    }
+    #icon {
+        font-size: 18px;
+        margin-right: 20px;
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        top: 40%;
+        text-align: center;
+        transition: all 1s;
+        background-color: rgb(34, 31, 31);
+    }
+    nav li {
+        display: block;
+        margin: 0px 25px;
+        line-height: 15px;
+    }
+    nav a {
+        font-size: 14px;
+        color: white;
+    }
+    #active,
+    a:hover {
+        border: none;
+        color: yellow;
+        transition: all 1s;
+    }
+    nav ul.show {
+        left: 0;
+    }
+}
+
+@media(max-wwidth:100px) {
+    #logo {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    #icon {
+        display: block;
+        font-size: 14px;
+    }
+    nav a {
+        font-size: 12px;
+        color: white;
+    }
+    nav li {
+        display: block;
+        margin: 20px 0px;
+        line-height: 7px;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        text-align: center;
+        top: 20%;
+        background-color: rgb(44, 42, 42);
+    }
+    #active,
+    a:hover {
+        border: none;
+        color: yellow;
     }
     nav ul.show {
         left: 0;
