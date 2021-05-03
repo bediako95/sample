@@ -1,268 +1,380 @@
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-}
-
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: url(steaman.png);
-    background-repeat: no-repeat;
-}
-
-nav {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(231, 154, 12);
-}
-
-#logo {
-    line-height: 80px;
-    font-size: 35px;
-    font-weight: bold;
-    padding: 0 50px;
-}
-
-nav ul {
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-}
-
-nav li {
-    display: inline-block;
-}
-
-nav a {
-    text-transform: uppercase;
-    color: black;
-    font-weight: bold;
-    font-size: 18sp;
-    margin: 0px 8px;
-    padding: 7px 10px;
-    border-radius: 3px;
-    border: 1 px solid transparent;
-}
-
-#active,
-a:hover {
-    border: 1px solid white;
-    transition: 1s;
-}
-
-#icon {
-    color: black;
-    display: none;
-    float: right;
-    margin-right: 40px;
-    line-height: 80px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-@media(max-width: 1048px) {
-    #logo {
-        padding: 0 60px;
-        font-size: 32sp;
-    }
-    nav ul {
-        margin-right: 20px;
-    }
-    nav a {
-        font-size: 18sp;
-    }
-}
-
-@media(max-width:909px) {
-    #logo {
-        font-size: 27px;
-    }
-    #icon {
-        display: block;
-    }
-    nav a {
-        font-size: 18px;
-        color: white;
-    }
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: -100%;
-        background-color: rgb(39, 35, 35);
-        top: 80px;
-        text-align: center;
-        transition: all 2s;
-    }
-    nav li {
-        display: block;
-        margin: 50px 0px;
-        line-height: 30px;
-    }
-    #active,
-    a:hover {
-        color: yellow;
-        border: none;
-        transition: 1s;
-    }
-    nav ul.show {
-        left: 0;
-    }
-}
-
-@media(max-width:350px) {
-    #logo {
-        font-size: 16px;
-        padding: 0 30px;
-    }
-    #icon {
-        font-size: 18px;
-        margin-right: 20px;
-        display: block;
-    }
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: -100%;
-        top: 40%;
-        text-align: center;
-        transition: all 1s;
-        background-color: rgb(34, 31, 31);
-    }
-    nav li {
-        display: block;
-        margin: 0px 25px;
-        line-height: 15px;
-    }
-    nav a {
-        font-size: 14px;
-        color: white;
-    }
-    #active,
-    a:hover {
-        border: none;
-        color: yellow;
-        transition: all 1s;
-    }
-    nav ul.show {
-        left: 0;
-    }
-}
-
-@media(max-wwidth:100px) {
-    #logo {
-        font-size: 12px;
-        padding: 0 10px;
-    }
-    #icon {
-        display: block;
-        font-size: 14px;
-    }
-    nav a {
-        font-size: 12px;
-        color: white;
-    }
-    nav li {
-        display: block;
-        margin: 20px 0px;
-        line-height: 7px;
-    }
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: -100%;
-        text-align: center;
-        top: 20%;
-        background-color: rgb(44, 42, 42);
-    }
-    #active,
-    a:hover {
-        border: none;
-        color: yellow;
-    }
-    nav ul.show {
-        left: 0;
-    }
-}
-
-#head {
-    line-height: 100px;
-    margin: 70px;
-    font-size: 25px;
-    text-decoration: underline;
-}
-
-#preamble {
-    color: white;
-    font-size: 20px;
-    margin: 0 70px;
-    margin-top: -40px;
-}
-
-#sect {
-    background-color: rgb(101, 101, 218);
-    margin-top: -40px;
-    margin: 70px;
-    border-radius: 4px;
-    width: 50%;
-    text-align: center;
-    height: 240px;
-}
-
-#mission_heading {
-    color: white;
-    padding: 10px;
-    text-decoration: underline;
-    font-size: 30px;
-}
-
-#mission {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 50px;
-}
-
-#explore {
-    background-color: white;
-    margin: 50px;
-    color: blue;
-    padding: 10px;
-    border-radius: 10px;
-    height: 30px;
-    width: 200px;
-    text-align: center;
-}
-
-#img_ceo {
-    width: 15%;
-    height: 50%;
-    float: left;
-    padding: 20px;
-    border-radius: 50%;
-}
-
-#ceo_sect {
-    width: 100%;
-    height: 300px;
-    margin: 40px 0px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-}
-
-#ceo_text {
-    font-size: 30px;
-    color: rgb(3, 3, 44);
-    margin: 60px;
-}
-
-#name {
-    float: right;
-    margin-right: 60px;
-    line-height: 10px;
-    color: rgb(9, 9, 54);
-    font-weight: bold;
-}
+            * {
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+            }
+            
+            body {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background: url(steaman.png);
+                background-repeat: no-repeat;
+            }
+            
+            nav {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(231, 154, 12);
+            }
+            
+            #logo {
+                line-height: 80px;
+                font-size: 35px;
+                font-weight: bold;
+                padding: 0 50px;
+            }
+            
+            nav ul {
+                float: right;
+                line-height: 80px;
+                margin-right: 40px;
+            }
+            
+            nav li {
+                display: inline-block;
+            }
+            
+            nav a {
+                text-transform: uppercase;
+                color: black;
+                font-weight: bold;
+                font-size: 18sp;
+                margin: 0px 8px;
+                padding: 7px 10px;
+                border-radius: 3px;
+                border: 1 px solid transparent;
+            }
+            
+            #active,
+            a:hover {
+                border: 1px solid white;
+                transition: 1s;
+            }
+            
+            #icon {
+                color: black;
+                display: none;
+                float: right;
+                margin-right: 40px;
+                line-height: 80px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            
+            @media(max-width: 1048px) {
+                #logo {
+                    padding: 0 60px;
+                    font-size: 32sp;
+                }
+                nav ul {
+                    margin-right: 20px;
+                }
+                nav a {
+                    font-size: 18sp;
+                }
+            }
+            
+            @media(max-width:909px) {
+                #logo {
+                    font-size: 27px;
+                }
+                #icon {
+                    display: block;
+                }
+                nav a {
+                    font-size: 18px;
+                    color: white;
+                }
+                nav ul {
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    left: -100%;
+                    background-color: rgb(39, 35, 35);
+                    top: 80px;
+                    text-align: center;
+                    transition: all 2s;
+                }
+                nav li {
+                    display: block;
+                    margin: 50px 0px;
+                    line-height: 30px;
+                }
+                #active,
+                a:hover {
+                    color: yellow;
+                    border: none;
+                    transition: 1s;
+                }
+                nav ul.show {
+                    left: 0;
+                }
+            }
+            
+            @media(max-width:350px) {
+                #logo {
+                    font-size: 16px;
+                    padding: 0 30px;
+                }
+                #icon {
+                    font-size: 18px;
+                    margin-right: 20px;
+                    display: block;
+                }
+                nav ul {
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    left: -100%;
+                    top: 40%;
+                    text-align: center;
+                    transition: all 1s;
+                    background-color: rgb(34, 31, 31);
+                }
+                nav li {
+                    display: block;
+                    margin: 0px 25px;
+                    line-height: 15px;
+                }
+                nav a {
+                    font-size: 14px;
+                    color: white;
+                }
+                #active,
+                a:hover {
+                    border: none;
+                    color: yellow;
+                    transition: all 1s;
+                }
+                nav ul.show {
+                    left: 0;
+                }
+            }
+            
+            @media(max-wwidth:100px) {
+                #logo {
+                    font-size: 12px;
+                    padding: 0 10px;
+                }
+                #icon {
+                    display: block;
+                    font-size: 14px;
+                }
+                nav a {
+                    font-size: 12px;
+                    color: white;
+                }
+                nav li {
+                    display: block;
+                    margin: 20px 0px;
+                    line-height: 7px;
+                }
+                nav ul {
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    left: -100%;
+                    text-align: center;
+                    top: 20%;
+                    background-color: rgb(44, 42, 42);
+                }
+                #active,
+                a:hover {
+                    border: none;
+                    color: yellow;
+                }
+                nav ul.show {
+                    left: 0;
+                }
+            }
+            
+            #head {
+                line-height: 100px;
+                margin: 70px;
+                font-size: 25px;
+                text-decoration: underline;
+            }
+            
+            #preamble {
+                color: white;
+                font-size: 20px;
+                margin: 0 70px;
+                margin-top: -40px;
+            }
+            
+            #sect {
+                background-color: rgb(101, 101, 218);
+                margin-top: -40px;
+                margin: 70px;
+                border-radius: 4px;
+                width: 50%;
+                text-align: center;
+                height: 240px;
+            }
+            
+            #mission_heading {
+                color: white;
+                padding: 10px;
+                text-decoration: underline;
+                font-size: 30px;
+            }
+            
+            #mission {
+                color: white;
+                font-size: 20px;
+                margin-bottom: 50px;
+            }
+            
+            #explore {
+                background-color: white;
+                margin: 50px;
+                color: blue;
+                padding: 10px;
+                border-radius: 10px;
+                height: 30px;
+                width: 200px;
+                text-align: center;
+            }
+            
+            #img_ceo {
+                width: 15%;
+                height: 50%;
+                float: left;
+                padding: 20px;
+                border-radius: 50%;
+            }
+            
+            #ceo_sect {
+                width: 100%;
+                height: 300px;
+                margin: 40px 0px;
+                padding: 20px;
+                background-color: white;
+                border-radius: 5px;
+            }
+            
+            #ceo_text {
+                font-size: 30px;
+                color: rgb(3, 3, 44);
+                margin: 60px;
+            }
+            
+            #name {
+                float: right;
+                margin-right: 60px;
+                line-height: 10px;
+                color: rgb(9, 9, 54);
+                font-weight: bold;
+            }
+            
+            #down {
+                background-color: rgb(34, 33, 33);
+                height: 100%;
+                width: 100%;
+            }
+            
+            #steaman_head {
+                color: orange;
+                text-decoration: underline;
+                margin-left: 30%;
+                padding-top: 20px;
+            }
+            
+            #s_express {
+                position: fixed;
+            }
+            
+            #steaman_sub {
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+                margin-left: 35%;
+                padding-top: 10px;
+            }
+            
+            #customer_care {
+                color: orange;
+                margin-left: 35%;
+                margin-top: -50px;
+                font-weight: bold;
+            }
+            
+            #quick {
+                color: orange;
+                margin-left: 60%;
+                margin-top: -17px;
+                font-weight: bold;
+            }
+            
+            #about {
+                color: orange;
+                margin-left: 80%;
+                margin-top: -17px;
+                font-weight: bold;
+            }
+            
+            .customer {
+                color: white;
+                margin-left: 35%;
+            }
+            
+            .quick {
+                color: white;
+                margin-left: 60%;
+                margin-top: -110px;
+            }
+            
+            .about {
+                color: white;
+                margin-left: 80%;
+                margin-top: -90px;
+            }
+            
+            #passive {
+                color: white;
+                border: none;
+            }
+            
+            #follow {
+                color: white;
+                margin-left: 55%;
+                margin-top: 60px;
+                margin-bottom: 10px;
+            }
+            
+            #social_media {
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+                text-decoration: none;
+            }
+            /* Add a hover effect if you want */
+            
+            #social:hover {
+                opacity: 0.7;
+            }
+            /* Set a specific color for each brand */
+            /* Facebook */
+            
+            .fa-facebook {
+                color: white;
+                margin-left: 50%;
+                width: 50px;
+                background: #3B5998;
+                border-radius: 50%;
+                margin-bottom: 50px;
+            }
+            /* Twitter */
+            
+            .fa-twitter {
+                color: white;
+                background: #55ACEE;
+                border-radius: 50%;
+                width: 50px;
+            }
+            
+            .fa-instagram {
+                color: white;
+                background: rgb(156, 52, 52);
+                border-radius: 50%;
+                width: 50px;
+            }
